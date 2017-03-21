@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>VÄLKOMMEN TILL MIN WEBBSIDA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+ <style>
+	 *{
+	padding: 0px;
+	margin: 0px;
+	box-sizing:border-box;
+	font-family: cinzel;
+	font-weight: bold;
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+    body {
+      position: relative; 
+	  width: 70%;
+	  height: auto;
+	  left: 15%;
+  }
+	.navbar-fixed-top{
+		   width: 70%;
+	       height: auto;
+	       left: 15%;
+  }
+	  .None{
+		  position:absolute;
+		  left: 38%;
+ }
+  #section1 {padding-top:50px;height:300px;color: #000007; background-color: #D8BFD8;}
+  #section2 {padding-top:50px;height:auto;color: #000007; background-color: #FFFFE0;}
+  #section3 {padding-top:50px;height:400px;color: #000007; background-color: #FFE4E1;}
+  #section4 {padding-top:50px;height:300px;color: #000007; background-color: #F0F8FF;}
+ 
+ </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">WEB API</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">ADD BOOK</a></li>
+          <li><a href="#section2">VIEW LISTA</a></li>
+          <li><a href="#section3">CHANGE BOOK</a></li>
+		  <li><a href="#section4">DELETE BOOK</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>  
+	
+	
+	          <!--- ADD BOOK --->
+
+<div id="section1" class="container-fluid">
+ 
+	<h2>ADD BOOK</h2>
+ 
+	  <tr >
+	    <td class="td1">
+			 <div class="form-group">
+				
+                <input type="text"    placeholder="Title" class="form-control" id="usr1"> <br>
+			    <input type="text" placeholder="Author" class="form-control" id="usr2"> <br>
+			    <div>
+				<button type="button" class="btn btn-info btn-large None" id="addbook"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Click here to add book</button>
+				</div>
+			  </div>
+		</td> 
+	   
+     </tr>
+</div>
+	
+	
+	
+	
+            <!--- VIEW BOOK --->	
+	
+<div id="section2" class="container-fluid">
+  <h2>VIEW LISTA</h2>
+  
+	  <tr>
+         <td class="td2">
+			<div class="form-group">
+				<div >
+                   <button type="button" class="btn btn-info btn-large None" id="view"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>  Click here to view books</button>
+				</div> <br>  <br>  <br>
+				<div class="well well-lg" id= "lista"><ol id="viewList"></ol></div>
+            </div>
+		 </td>
+      </tr>
+</div>
+
+	
+	
+	
+	       <!--- CHANGE BOOK --->
+	
+	<div id="section3" class="container-fluid">
+  <h2>CHANGE BOOK</h2>
+    <tr>
+        <td class="td3">
+			  <div class="form-group">
+                <input type="text"    placeholder="Book ID" class="form-control" id="id"> <br>
+			    <input type="text" placeholder="Book Title" class="form-control" id="title"> <br>
+				<input type="text" placeholder="Book Author" class="form-control" id="author"> <br>
+			    <div>
+				<button type="button" class="btn btn-info btn-large None" id="change"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Click here to change book</button>
+				</div>
+				
+		</td> 
+			
+             </div>
+	    </td>
+     </tr>
+</div>
+
+	
+	
+	
+	
+	 <!--- DELETE BOOK --->
+	
+ <div id="section4" class="container-fluid">
+  <h2>DELETE BOOK</h2>
+   <tr>
+        <td class="td4">
+			  <div class="form-group">
+				
+                <input type="text"    placeholder="Book ID" class="form-control" id="delete"> <br>
+			    
+			    <div>
+				<button type="button" class="btn btn-info btn-large None" id="deleteBook1"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Click here to delete book</button>
+				</div>
+				
+		</td> 
+			
+             </div>
+	    </td>
+     </tr>
+		
+		
+		
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="apibok.js"></script>
+<script src="js/bootstrap.js"></script>
+    
+	
+
+
+</body>
+</html>
